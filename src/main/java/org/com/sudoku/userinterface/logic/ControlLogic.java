@@ -1,5 +1,6 @@
 package org.com.sudoku.userinterface.logic;
 
+import org.com.sudoku.computationlogic.GameLogic;
 import org.com.sudoku.constants.GameState;
 import org.com.sudoku.constants.Messages;
 import org.com.sudoku.problemdomain.IStorage;
@@ -32,12 +33,12 @@ public class ControlLogic implements IUserInterfaceContract.EventListener {
   public void onSudokuInput(int x, int y, int input) {
     try {
       SudokuGame gameData = storage.getGameData();
-      int[][] mewGridState = gameData.getCopyOfGridState();
-      mewGridState[x][y] = input;
+      int[][] newGridState = gameData.getCopyOfGridState();
+      newGridState[x][y] = input;
 
       gameData = new SudokuGame(
               GameLogic.checkForCompletion(newGridState),
-              mewGridState
+              newGridState
       );
 
       storage.updateGameData(gameData);

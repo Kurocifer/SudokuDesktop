@@ -15,6 +15,9 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.com.sudoku.constants.GameState;
+import org.com.sudoku.problemdomain.Coordinates;
+import org.com.sudoku.problemdomain.SudokuGame;
 
 import java.util.HashMap;
 

@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Background;
@@ -20,6 +22,8 @@ import org.com.sudoku.problemdomain.Coordinates;
 import org.com.sudoku.problemdomain.SudokuGame;
 
 import java.util.HashMap;
+import java.util.Objects;
+
 public class BadUserInterfaceImpl implements IUserInterfaceContract.View,
           EventHandler<KeyEvent> {
   private final Stage stage;
@@ -37,6 +41,7 @@ public class BadUserInterfaceImpl implements IUserInterfaceContract.View,
 
     Scene scene = new Scene(root, 668, 668);
 
+
     Text t = new Text(235, 690, "Sudoku");
     t.setFill(Color.WHITE);
     Font tf = new Font(43);
@@ -53,6 +58,7 @@ public class BadUserInterfaceImpl implements IUserInterfaceContract.View,
     bg.setHeight(576);
     bg.setFill(Color.rgb(224, 242, 241));
     root.getChildren().add(bg);
+
 
     final int xOrigin = 50;
     final int yOrigin = 50;
