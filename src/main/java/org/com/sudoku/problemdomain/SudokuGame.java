@@ -12,4 +12,11 @@ public class SudokuGame implements Serializable {
     this.gameState = gameState;
     this.gridState = gridState;
   }
+
+  public GameState getGameState() {
+    return gameState;
+  }
+
+  public int[][] getCopyOfGridState() {}
+  return SudokuUtilities.copyToNewArray(gridState);
 }
