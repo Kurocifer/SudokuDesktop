@@ -16,7 +16,8 @@ public class SudokuApplication extends Application {
   public void start(Stage stage) throws IOException {
     // Get sudokuGame object for a new game
     uiImpl = new UserInterfaceImpl(stage);
-    
+    Image appIcon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("sudokuIcon.jpeg")));
+    stage.getIcons().add(appIcon);
 
     try {
       SudokuBuildLogic.build(uiImpl);
